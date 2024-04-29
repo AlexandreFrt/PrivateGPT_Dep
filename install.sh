@@ -59,7 +59,7 @@ fi
 read -p "Voulez-vous installer poetry ? (y/n) : " poetry
 if [ $poetry == "y" ]
 then
-	curl -sSL https://install.python-poetry.org | python3 -
+	curl -sSL https://install.python-poetry.org | python3.11 -
 	export PATH="$HOME/.local/bin:$PATH"
 	exec "$SHELL"
 fi
