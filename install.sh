@@ -1,6 +1,15 @@
 #!/bin/bash
 apt -y install wget curl
 
+# Sleep | Suspend | Hibernate | Hybrid-sleep configuration
+read -p "Sleep | Suspend | Hibernate | Hybrid-sleep : (enable/disable)" sleep
+if [ $sleep == "enable" ]
+then
+	sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+elif [ $sleep == "disable" ]
+	sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+fi
+
 # Install Wi-Fi drivers
 read -p "Voulez-vous installer les drivers Wi-Fi ? (y/n) : " wifi
 if [ $wifi == "y" ]
