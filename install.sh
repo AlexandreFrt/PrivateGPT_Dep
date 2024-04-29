@@ -11,7 +11,7 @@ elif [ $sleep == "disable" ]
 fi
 
 # Install Wi-Fi drivers
-read -p "Voulez-vous installer les drivers Wi-Fi ? (y/n) : " wifi
+read -p "Install Wi-Fi drivers ? (y/n) : " wifi
 if [ $wifi == "y" ]
 then
 	lspci -nnkd ::280
@@ -19,7 +19,7 @@ then
 fi
 
 # Install cuda
-read -p "Voulez-vous installer les drivers cuda ? (y/n) : " cuda
+read -p "Install cuda 11.8 ? (y/n) : " cuda
 if [ $cuda == "y" ]
 then
 	wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda-repo-debian11-11-8-local_11.8.0-520.61.05-1_amd64.deb
@@ -31,14 +31,14 @@ then
 fi
 
 # Install git
-read -p "Voulez-vous installer git ? (y/n) : " git
+read -p "Install git ? (y/n) : " git
 if [ $git == "y" ]
 then
 	apt -y install git
 fi
 
 # Install python3.11
-read -p "Voulez-vous installer python3.11 ? (y/n) : " python
+read -p "Install python3.11 ? (y/n) : " python
 if [ $python == "y" ]
 then
 	apt -y install software-properties-common build-essential libnss3-dev zlib1g-dev libgdbm-dev libncurses5-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev libbz2-dev lzma liblzma-dev python-tk python3-tk tk-dev
@@ -54,7 +54,7 @@ then
 fi
 
 # Install pyenv
-read -p "Voulez-vous installer pyenv ? (y/n) : " pyenv
+read -p "Install pyenv ? (y/n) : " pyenv
 if [ $pyenv == "y" ]
 then
 	git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -65,7 +65,7 @@ then
 fi
 
 # Install poetry
-read -p "Voulez-vous installer poetry ? (y/n) : " poetry
+read -p "Install poetry ? (y/n) : " poetry
 if [ $poetry == "y" ]
 then
 	curl -sSL https://install.python-poetry.org | python3.11 -
