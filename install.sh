@@ -7,6 +7,7 @@ if [ $sleep == "enable" ]
 then
 	sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
 elif [ $sleep == "disable" ]
+then
 	sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 fi
 
