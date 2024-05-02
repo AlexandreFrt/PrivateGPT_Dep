@@ -42,7 +42,7 @@ fi
 read -p "Install python3.11 ? (y/n) : " python
 if [ $python == "y" ]
 then
-	apt -y install software-properties-common build-essential libnss3-dev zlib1g-dev libgdbm-dev libncurses5-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev libbz2-dev lzma liblzma-dev python-tk python3-tk tk-dev
+	apt -y install software-properties-common build-essential libnss3-dev zlib1g-dev libgdbm-dev libncurses5-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev libbz2-dev lzma liblzma-dev python-tk python3-tk tk-dev llvm libncursesw5-dev xz-utils libxml2-dev libxmlsec1-dev
 	wget https://www.python.org/ftp/python/3.11.7/Python-3.11.7.tgz
 	tar xvf Python-3.11.7.tgz
 	cd Python-3.11.7
