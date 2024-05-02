@@ -1,5 +1,5 @@
 #!/bin/bash
-apt -y install wget curl
+apt -y install wget curl make build-essential
 
 # Sleep | Suspend | Hibernate | Hybrid-sleep configuration
 read -p "Sleep | Suspend | Hibernate | Hybrid-sleep (enable/disable) : " sleep
